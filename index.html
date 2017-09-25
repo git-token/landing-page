@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#f48f42" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GitToken</title>
+        <link href="./src/assets/stylesheets/bootstrap.min.css" rel="stylesheet" title="United Bootswatch Theme">
+        <style>
+          .path {
+            animation: draw 3.5s infinite;
+          }
+
+          @keyframes draw {
+           from {
+             stroke-dashoffset: 1000px;
+             stroke-dasharray: 100 100;
+           }
+
+           to {
+             stroke-dashoffset: 0px;
+             stroke-dasharray: 100 100;
+           }
+         }
+
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <!-- Main -->
+        <script src="./gittoken-landing.dist.js"></script>
+        <!-- <script src="http://localhost:8080/webpack-dev-server.js"></script> -->
+
+    </body>
+</html>

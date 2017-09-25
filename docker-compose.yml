@@ -1,0 +1,7 @@
+version: '3.0'
+services:
+  landingpage:
+    ports:
+      - 1328:8080
+    build:
+      context: .
