@@ -15,9 +15,9 @@ ReactDOM.render(
           <div>
             <Header history={history} />
 						<RouterRedirect />
-						{/* <Route exact path="/" component={Presentation} />
-						<Route exact path="/roadmap" component={RoadMap} />
-						<Footer /> */}
+            <Route exact path="/" component={Presentation} />
+						{/* <Route exact path="/roadmap" component={RoadMap} /> */}
+            <Footer />
           </div>
       </Provider>
     </BrowserRouter>,

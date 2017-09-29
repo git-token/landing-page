@@ -88,7 +88,7 @@ class HeaderComponent extends Component {
             <div style={{ height: "450px", textAlign: 'center', marginTop: '100px', marginBottom: '500px' }}>
 
             </div> */}
-            <div style={{ height: "450px", textAlign: 'center', marginBottom: '500px' }}>
+            <div style={{ marginTop: "200px", textAlign: 'center', marginBottom: '500px' }}>
               <RegistryLogo height={"350px"} />
 
               {/* <svg height="350px" viewBox="0 0 400 400" style={{ marginLeft: '-90px' }}>
@@ -111,7 +111,7 @@ class HeaderComponent extends Component {
               <h2>{timeRemaining}</h2>
               <br/>
               <br/>
-              <div style={{
+              {/* <div style={{
                 width: '30%',
                 margin: 'auto',
                 display: 'block',
@@ -128,7 +128,7 @@ class HeaderComponent extends Component {
                     Demo Alpha
                   </a>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </Col>
         </Row>

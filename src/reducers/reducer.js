@@ -18,7 +18,7 @@ roadmap: [{
 		'Software Upgradeability'
 	],
 	startDate: new Date().toDateString(),
-	endDate: new Date("9/30/2017").toDateString(),
+	endDate: new Date('Sat Sep 30 2017 16:00:00 GMT-0700 (PDT)'),
 	gif: './src/assets/images/demo.gif'
 },{
 	title: 'GitToken Registry & Exchange',
@@ -65,22 +65,30 @@ roadmap: [{
 	gif: './src/assets/images/demo.gif'
 }],
 presentation: [{
-	title: 'GitToken',
-	subtitle: 'Earn Ethereum Tokens for GitHub Contributions',
-	gifs: ['./src/assets/images/demo.gif'],
+	title: 'Introducing GitToken',
+	subtitle: 'Issue and Earn Ethereum ERC20 Tokens for GitHub Contributions',
+	gifs: [],
 	bullets: [],
-	description: '',
+	description: [
+		`GitToken is open-source software (OSS) enabling any GitHub organization to
+		issue and distribute Ethereum ERC20 tokens for rewarding contributions made
+		toward the organization's repositories.\n`,
+		`The GitToken software listens to organizations' GitHub web hook events, and subsequently
+		issues and distributes tokens to contributors correpsonding to reward point values mapped in the
+		GitToken contract.\n
+		`
+	],
 	code: ''
 }, {
 	title: 'Git + GitHub + GitToken',
 	subtitle: 'Using Git and GitHub Work Flows with GitToken',
 	gifs:['./src/assets/images/github_project_management.gif'],
 	bullets: [
-		'Git is distributed version control software; used to track changes in software.',
-		'GitHub is the largest hosting service for open source code.',
-		'GitHub helps developers organize and release their software.',
-		'GitHub helps other developers report bugs, contribute, and evaluate software.',
-		'GitToken provides software to GitHub organizations to reward contributions.'
+		'Git is a distributed version control software.',
+		// 'GitHub is the largest hosting service for open source code.',
+		// 'GitHub helps developers organize and release their software.',
+		// 'GitHub helps developers manage bugs, contributions, and evaluate software.',
+		// 'GitToken provides software to GitHub organizations to reward contributions.'
 	],
 	description: '',
 	code: '',
@@ -116,7 +124,7 @@ presentation: [{
 	description: '',
 	code: ''
 }],
-activeSlide: 1
+activeSlide: 0
 }
 
 export default function main(state=INITITAL_STATE, action) {

@@ -22,35 +22,35 @@ class PresentationComponent extends Component {
 		const { dispatch, main: { activeSlide } } = this.props;
 
 		dispatch({ type: 'SET_SLIDE', value: +(activeSlide+s) })
-	}	
+	}
 
   render() {
     const { main: { activeSlide, presentation } } = this.props
-		
+
     return (
 			<div style={{ background: 'linear-gradient(45deg, #0c0019, #493f5b)', color: 'white' }}>
-			<Row style={{ height: '800px'}}>
-				{ presentation[activeSlide].title ? 
-					<Slide slide={presentation[activeSlide]} />
-					: null
-				}
-			</Row>
-			<Row style={{ paddingBottom: '50px', textAlign: 'center' }}>	
-					<ButtonGroup>
-						<Button
-							onClick={ this.changeSlide.bind(this, -1) }
-							bsStyle={'primary'} 
-							disabled={ activeSlide == 0 }>
-								Previous Slide
-						</Button>
-						<Button
-							onClick={ this.changeSlide.bind(this, 1) }
-							bsStyle={'primary'} 
-							disabled={ +activeSlide == +(presentation.length - 1)}>
-								Next Slide
-						</Button>
-					</ButtonGroup>
-			</Row>
+  			<Row >
+  				{ presentation[activeSlide].title ?
+  					<Slide slide={presentation[activeSlide]} />
+  					: null
+  				}
+  			</Row>
+  			<Row style={{ paddingBottom: '50px', textAlign: 'center' }}>
+  					<ButtonGroup>
+  						<Button
+  							onClick={ this.changeSlide.bind(this, -1) }
+  							bsStyle={'primary'}
+  							disabled={ activeSlide == 0 }>
+  								Previous Slide
+  						</Button>
+  						<Button
+  							onClick={ this.changeSlide.bind(this, 1) }
+  							bsStyle={'primary'}
+  							disabled={ +activeSlide == +(presentation.length - 1)}>
+  								Next Slide
+  						</Button>
+  					</ButtonGroup>
+  			</Row>
 			</div>
 		)
   }

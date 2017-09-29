@@ -6,6 +6,10 @@ import {
   Row, Col, ProgressBar
 } from 'react-bootstrap'
 
+import {
+  MainLogo
+} from '../SVG/index'
+
 class FooterComponent extends Component {
   constructor(opts) {
     super(opts)
@@ -13,10 +17,19 @@ class FooterComponent extends Component {
 
   render() {
     return (
-      <div style={{ height: '600px', background: 'linear-gradient(45deg, #0c0019, #493f5b)', color: 'white' }}>
-        <Row style={{ marginBottom: '500px'}}>
+      <div style={{ background: 'linear-gradient(135deg, #0c0019, #493f5b)', color: 'white' }}>
+        <Row style={{ }}>
           <Col sm={4}></Col>
-          <Col sm={4}></Col>
+          <Col sm={4}>
+            <div style={{
+                textAlign: 'center',
+                marginBottom: '50px',
+                paddingTop: '100px'
+              }}>
+              <MainLogo height={"100px"}/>
+            <h4>GitToken Copyright 2017-2018</h4>
+            </div>
+          </Col>
           <Col sm={4}></Col>
         </Row>
       </div>
