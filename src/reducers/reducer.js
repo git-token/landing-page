@@ -9,7 +9,7 @@ roadmap: [{
 		for any GitHub organization!
 	`,
 	features: [
-		'100% Free & MIT Licensed Open Source',
+		'100% Free & MIT Licensed Open-Source',
 		'ERC-20+ Token Issuance & Automated Distributions',
 		'GitHub Web Hook Integration',
 		'Deployment & Transaction Signing Middleware',
@@ -66,62 +66,168 @@ roadmap: [{
 }],
 presentation: [{
 	title: 'Introducing GitToken',
-	subtitle: 'Issue and Earn Ethereum ERC20 Tokens for GitHub Contributions',
+	subtitle: 'Issue and Earn Ethereum ERC20 Tokens for Your GitHub Contributions',
 	gifs: [],
 	bullets: [],
-	description: [
-		`GitToken is open-source software (OSS) enabling any GitHub organization to
-		issue and distribute Ethereum ERC20 tokens for rewarding contributions made
-		toward the organization's repositories.\n`,
-		`The GitToken software listens to organizations' GitHub web hook events, and subsequently
-		issues and distributes tokens to contributors correpsonding to reward point values mapped in the
-		GitToken contract.\n
-		`
-	],
-	code: ''
+	description: [`\n`],
+	code: `
+	/**
+
+	GitToken enables any GitHub organization to issue and distribute Ethereum
+	ERC20 tokens to incentivize and reward contributors for contributing to
+	organizations' GitHub (public or private) repositories.
+
+	*/
+
+	// Any time a Pages site is built or results in a failed build.
+	gittoken.rewardValues['page_build']                       = 500 * 10**_decimals;
+
+	// Any time a Project Card is created, edited, moved, converted to an issue,
+	gittoken.rewardValues['project_card']                     = 250 * 10**_decimals;
+
+	// Any time a Project is created, edited, closed, reopened, or deleted.
+	gittoken.rewardValues['project']                          = 1000 * 10**_decimals;
+
+	// Any time a pull request is assigned, unassigned, labeled, unlabeled, opened,
+	// edited, closed, reopened, or synchronized (updated due to a new push in the
+	// branch that the pull request is tracking). Also any time a pull request
+	// review is requested, or a review request is removed.
+	gittoken.rewardValues['pull_request']                     = 2500 * 10**_decimals;
+
+	`
 }, {
 	title: 'Git + GitHub + GitToken',
 	subtitle: 'Using Git and GitHub Work Flows with GitToken',
-	gifs:['./src/assets/images/github_project_management.gif'],
-	bullets: [
-		'Git is a distributed version control software.',
-		// 'GitHub is the largest hosting service for open source code.',
-		// 'GitHub helps developers organize and release their software.',
-		// 'GitHub helps developers manage bugs, contributions, and evaluate software.',
-		// 'GitToken provides software to GitHub organizations to reward contributions.'
+	gifs: [
+		'./src/assets/images/github_project_management.gif'
 	],
-	description: '',
-	code: '',
+	bullets: [],
+	description: [],
+	code: `
+
+
+	## Built to incentivize and reward project management and (open-source)
+	## software development.
+
+
+	## Integrates with Git command line interface (CLI) and graphical user interface
+	## (GUI) programs.
+
+
+	## Modeling toward incentivizing best practice works flows; Yet,
+	## flexible enough to customize for your team's work flows.
+
+
+	## Use GitHub webhook and organization settings to manage payload requests to
+	## the contract.
+
+	`,
 }, {
 	title: 'Getting Started with GitToken',
-	subtitle: 'Setting Up GitToken Services',
+	subtitle: 'Installation',
+	gifs: [
+		'./src/assets/images/git-token-install.gif'
+	],
+	bullets: [],
+	description: [],
+	code: `
+
+
+		## Install GitToken CLI programs using NPM or Yarn
+
+
+
+		>_ npm i -g git-token@alpha
+
+
+
+		## or, using Yarn package manager
+
+
+
+		>_ yarn global add git-token@alpha
+
+
+	`
+},{
+	title: 'GitToken Registry',
+	subtitle: 'Register Your Organization to Setup https://webhook.gittoken.io/<organization>',
+	gifs: [
+		'./src/assets/images/git-token-register.gif'
+	],
+	bullets: [],
+	description: [],
+	code: `
+	## Register using the GitToken CLI program
+
+	>_ git token register
+
+	also, as an alias...
+
+	>_ git token rebase
+
+	## Rebase will eventually be used to migrate contracts when new
+	## versions of GitToken contracts are released
+
+
+
+
+
+	## All Your Re-Base Are Belong To Us ;)
+
+	`
+},{
+	title: 'GitToken Terminal',
+	subtitle: 'Search and interact with GitToken projects from the terminal!',
+	gifs: ['./src/assets/images/demo.gif'],
+	bullets: [],
+	description: [],
+	code: ''
+},{
+	title: 'GitToken Mechanics',
+	subtitle: 'Technical Overview',
+	gifs: ['./src/assets/images/demo.gif'],
+	bullets: [],
+	description: [],
+	code: ''
+},{
+	title: 'Torvalds Network',
+	subtitle: 'Connect to: https://torvalds.gittoken.io',
 	gifs: ['./src/assets/images/demo.gif'],
 	bullets: [
-		'Docker Services',
-		'GitHub Web Hook Configuration'
+		`
+			The Torvalds Network is an Ethereum test network open to GitToken
+			early adopters.
+		`,
+		`
+			DISCLAIMER: This is a test network and values on this network do not hold
+			any value or any future value. The network is purely for testing.
+		`
 	],
-	description: '',
+	description: [],
 	code: ''
 }, {
-	title: 'Docker Services',
-	subtitle: 'Using Docker Compose to Deploy GitToken Software',
-	gifs: ['./src/assets/images/demo.gif'],
-	bullets: [],
-	description: '',
+	title: 'Funding Open-Source Software Development',
+	subtitle: 'Milestones, Auctions and Exchanges',
+	gifs: [
+		''
+	],
+	bullets: [
+		`Completed milestones start new auctions`,
+		`
+			A reserved supply of tokens is withheld by the organizations' GitToken
+			contract for auction upon certain events (e.g. a new member added or a milestone completed)
+		`,
+		'Auction Model'
+	],
+	description: [],
 	code: ''
-}, {
-	title: 'GitHub Web Hook Configuration',
-	subtitle: 'Listen for Contribution Events',
+},{
+	title: 'GitToken RoadMap',
+	subtitle: 'Q4 2017',
 	gifs: ['./src/assets/images/demo.gif'],
 	bullets: [],
-	description: '',
-	code: ''
-}, {
-	title: 'A Practical Evolution in Software Development & Funding',
-	subtitle: 'Integrating Milestones and Token Auctions',
-	gifs: ['./src/assets/images/demo.gif'],
-	bullets: [],
-	description: '',
+	description: [],
 	code: ''
 }],
 activeSlide: 0

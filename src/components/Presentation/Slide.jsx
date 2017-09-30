@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
+import Highlight from 'react-highlight'
+
 import {
   Panel, Row, Col, ButtonGroup, Button
 } from 'react-bootstrap'
@@ -12,16 +14,29 @@ class SlideComponent extends Component {
     super(opts)
   }
 
+  showCode({ code, lang, size, key }){
+    return (
+      <Highlight className={lang} key={key}>
+        <p style={{ fontSize: size ? size : '100%' }}>{code}</p>
+      </Highlight>
+    )
+  }
+
   titleSlide({ slide }) {
+    const { description, code } = slide
+
     return (
       <div>
         <Col sm={2}/>
         <Col sm={8}>
-          <br/>
-          {slide['description'].map((d, i) => {
+          {description.map((d, i) => {
             return (
-              <div key={i}>
-                <h1>{d}</h1>
+              <div key={i} >
+                <div style={{ textAlign: 'center' }}>
+                  <h3>{d}</h3>
+                </div>
+                <br/>
+                {this.showCode({ code, lang: 'js' })}
                 <br/>
               </div>
             )
@@ -33,16 +48,28 @@ class SlideComponent extends Component {
   }
 
   contentSlide({ slide }) {
-    const { gifs, bullets } = slide
+    const { gifs, bullets, code, title } = slide
+
+    let list = () => {
+      return (
+        <ul style={{ fontSize: '24px' }}>
+          { bullets.map((item, i) => {
+              return (<div key={i}><li >{item}</li><br/></div>)
+            })
+          }
+        </ul>
+      )
+    }
+
     return (
       <div>
         <Col sm={6}>
-          <ul style={{ fontSize: '36px' }}>
-            { bullets.map((item, i) => { return (<li key={i}>{item}</li>) }) }
-          </ul>
+          { bullets.length > 0 ?
+              list() : this.showCode({ code: slide['code'], lang: 'md', size: '120%', key: title })
+          }
         </Col>
         <Col sm={6}>
-          { gifs.map((gif, i) => { return (<img width={'100%'} key={i} src={gif} />) }) }
+          { gifs.map((gif, i) => { return (<img width={`${String(100/(i+1))}%`} key={i} src={gif} />) }) }
         </Col>
       </div>
     )
@@ -50,7 +77,11 @@ class SlideComponent extends Component {
 
   renderSlide({ slide }) {
     const { title, description, gifs, bullets, subtitle, code } = slide
-    if (gifs.length && bullets.length) {
+    if (
+      gifs.length && bullets.length ||
+      gifs.length && description ||
+      code.length && gifs.length
+    ) {
       return this.contentSlide({ slide })
     } else {
       return this.titleSlide({ slide })
@@ -63,10 +94,10 @@ class SlideComponent extends Component {
 
 
     return (
-			<div style={{ height: '900px', paddingLeft: '50px', paddingRight: '50px'}}>
+			<div style={{ paddingLeft: '50px', paddingRight: '50px'}}>
 				<Row style={{ textAlign: 'left', paddingBottom: '15px' }}>
 					<Col sm={12}>
-						<h1>{title} | <small>{subtitle}</small></h1>
+						<h1 style={{ marginLeft: '60px' }}>{title} | <small>{subtitle}</small></h1>
 						<hr/>
 					</Col>
 			</Row>

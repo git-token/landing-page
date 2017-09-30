@@ -20,37 +20,51 @@ class PresentationComponent extends Component {
 
 	changeSlide(s) {
 		const { dispatch, main: { activeSlide } } = this.props;
-
-		dispatch({ type: 'SET_SLIDE', value: +(activeSlide+s) })
+    let value = Number(activeSlide) + Number(s)
+		dispatch({ type: 'SET_SLIDE', value })
 	}
+
+  navigation() {
+    const { main: { activeSlide, presentation } } = this.props
+    return (
+      <Row style={{ paddingBottom: '50px', textAlign: 'center' }}>
+          <ButtonGroup>
+            <Button
+              onClick={ this.changeSlide.bind(this, -1) }
+              bsStyle={'primary'}
+              disabled={ activeSlide == 0 }>
+                Previous Slide
+            </Button>
+            <Button
+              onClick={ this.changeSlide.bind(this, 1) }
+              bsStyle={'primary'}
+              disabled={ +activeSlide == +(presentation.length - 1)}>
+                Next Slide
+            </Button>
+          </ButtonGroup>
+      </Row>
+    )
+  }
 
   render() {
     const { main: { activeSlide, presentation } } = this.props
+    const slide = presentation[activeSlide]
+
+    const showSlide = ({ slide }) => {
+      if (slide.title) {
+        return (<Slide slide={slide} />)
+      }
+    }
 
     return (
 			<div style={{ background: 'linear-gradient(45deg, #0c0019, #493f5b)', color: 'white' }}>
-  			<Row >
-  				{ presentation[activeSlide].title ?
-  					<Slide slide={presentation[activeSlide]} />
-  					: null
-  				}
-  			</Row>
-  			<Row style={{ paddingBottom: '50px', textAlign: 'center' }}>
-  					<ButtonGroup>
-  						<Button
-  							onClick={ this.changeSlide.bind(this, -1) }
-  							bsStyle={'primary'}
-  							disabled={ activeSlide == 0 }>
-  								Previous Slide
-  						</Button>
-  						<Button
-  							onClick={ this.changeSlide.bind(this, 1) }
-  							bsStyle={'primary'}
-  							disabled={ +activeSlide == +(presentation.length - 1)}>
-  								Next Slide
-  						</Button>
-  					</ButtonGroup>
-  			</Row>
+        <div style={{ height: '700px' }}>
+          <Row>
+    				{showSlide({ slide })}
+    			</Row>
+        </div>
+        <br/>
+  			{this.navigation()}
 			</div>
 		)
   }

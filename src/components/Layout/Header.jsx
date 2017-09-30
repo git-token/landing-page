@@ -105,10 +105,15 @@ class HeaderComponent extends Component {
                 <circle cx="250" cy="200" r="8" fill="#2a1e38"/>
               </svg> */}
               <h1 style={{ fontSize: '72px', marginTop: '-50px' }}>GitToken</h1>
+              <br/>
+              <br/>
               <h2 >Issue and Earn Ethereum ERC20 Tokens for your GitHub Contributions</h2>
+              <br/>
+              <br/>
               <br/>
               <h3>COUNTDOWN TO ALPHA RELEASE</h3>
               <h2>{timeRemaining}</h2>
+              {/* <img width={'40%'} src={'https://media.giphy.com/media/jnBXe38Ww2XAI/giphy.gif'} /> */}
               <br/>
               <br/>
               {/* <div style={{
