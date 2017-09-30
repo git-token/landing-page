@@ -49584,7 +49584,7 @@ var SlideComponent = function (_Component) {
                 )
               ),
               _react2.default.createElement('br', null),
-              _this2.showCode({ code: code, lang: 'js' }),
+              _this2.showCode({ code: code, lang: 'md', size: '150%' }),
               _react2.default.createElement('br', null)
             );
           })
@@ -67656,63 +67656,56 @@ var INITITAL_STATE = {
 		gifs: [],
 		bullets: [],
 		description: ['\n'],
-		code: '\n\t/**\n\n\tGitToken enables any GitHub organization to issue and distribute Ethereum\n\tERC20 tokens to incentivize and reward contributors for contributing to\n\torganizations\' GitHub (public or private) repositories.\n\n\t*/\n\n\t// Any time a Pages site is built or results in a failed build.\n\tgittoken.rewardValues[\'page_build\']                       = 500 * 10**_decimals;\n\n\t// Any time a Project Card is created, edited, moved, converted to an issue,\n\tgittoken.rewardValues[\'project_card\']                     = 250 * 10**_decimals;\n\n\t// Any time a Project is created, edited, closed, reopened, or deleted.\n\tgittoken.rewardValues[\'project\']                          = 1000 * 10**_decimals;\n\n\t// Any time a pull request is assigned, unassigned, labeled, unlabeled, opened,\n\t// edited, closed, reopened, or synchronized (updated due to a new push in the\n\t// branch that the pull request is tracking). Also any time a pull request\n\t// review is requested, or a review request is removed.\n\tgittoken.rewardValues[\'pull_request\']                     = 2500 * 10**_decimals;\n\n\t'
-	}, {
-		title: 'Git + GitHub + GitToken',
-		subtitle: 'Using Git and GitHub Work Flows with GitToken',
-		gifs: ['./src/assets/images/github_project_management.gif'],
-		bullets: [],
-		description: [],
-		code: '\n\n\n\t## Built to incentivize and reward project management and (open-source)\n\t## software development.\n\n\n\t## Integrates with Git command line interface (CLI) and graphical user interface\n\t## (GUI) programs.\n\n\n\t## Modeling toward incentivizing best practice works flows; Yet,\n\t## flexible enough to customize for your team\'s work flows.\n\n\n\t## Use GitHub webhook and organization settings to manage payload requests to\n\t## the contract.\n\n\t'
+		code: '\n\tGitToken enables any GitHub organization to issue and\n\tdistribute Ethereum ERC20 tokens to incentivize and\n\treward contributors for contributing to organizations\'\n\tGitHub (public or private) repositories.\n\n\tPresentation Topics:\n\n\t- Installing GitToken CLI\n\t- Registering a GitHub Organization with GitToken Registry\n\t- Git + GitHub + GitToken Work Flows\n\t- Using the GitToken Terminal\n\t- Torvalds Ethereum Network\n\t- Funding Open-Source Software with GitToken\n\t- GitToken Q4 2017 RoadMap\n\n\t'
 	}, {
 		title: 'Getting Started with GitToken',
 		subtitle: 'Installation',
 		gifs: ['./src/assets/images/git-token-install.gif'],
 		bullets: [],
 		description: [],
-		code: '\n\n\n\t\t## Install GitToken CLI programs using NPM or Yarn\n\n\n\n\t\t>_ npm i -g git-token@alpha\n\n\n\n\t\t## or, using Yarn package manager\n\n\n\n\t\t>_ yarn global add git-token@alpha\n\n\n\t'
+		code: '\n\n\tInstall GitToken CLI programs using NPM or Yarn\n\n\t>_ npm i -g git-token@alpha\n\n\tor, using Yarn package manager\n\n\t>_ yarn global add git-token@alpha\n\n\n\t'
 	}, {
 		title: 'GitToken Registry',
 		subtitle: 'Register Your Organization to Setup https://webhook.gittoken.io/<organization>',
 		gifs: ['./src/assets/images/git-token-register.gif'],
 		bullets: [],
 		description: [],
-		code: '\n\t## Register using the GitToken CLI program\n\n\t>_ git token register\n\n\talso, as an alias...\n\n\t>_ git token rebase\n\n\t## Rebase will eventually be used to migrate contracts when new\n\t## versions of GitToken contracts are released\n\n\n\n\n\n\t## All Your Re-Base Are Belong To Us ;)\n\n\t'
+		code: '\n\tRegister using the GitToken CLI program\n\n\t>_ git token register\n\n\talso, as an alias...\n\n\t>_ git token rebase\n\n\tThe \'rebase\' command will eventually be\n\tused to migrate contracts when new versions\n\tof GitToken contracts are released or when\n\tmigrating contracts to different blockchain\n\tnetworks\n\n\t'
+	}, {
+		title: 'Git + GitHub + GitToken',
+		subtitle: 'Using Git and GitHub Work Flows with GitToken',
+		gifs: ['./src/assets/images/github_project_management.gif'],
+		bullets: [],
+		description: [],
+		code: '\n\n\n\tBuilt to incentivize and reward project\n\tmanagement and (open-source) software\n\tdevelopment.\n\n\n\tIntegrates with Git command line interface\n\t(CLI) and graphical user interface (GUI)\n\tprograms.\n\n\n\tModeling toward incentivizing best practice work\n\tflows; Yet, flexible enough to customize for your\n\tteam\'s style.\n\n\n\tUse GitHub webhook and organization settings to\n\tmanage payload requests to the contract.\n\n\t'
 	}, {
 		title: 'GitToken Terminal',
-		subtitle: 'Search and interact with GitToken projects from the terminal!',
-		gifs: ['./src/assets/images/demo.gif'],
+		subtitle: 'Search and Interact with GitToken Projects from the Command Terminal!',
+		gifs: ['./src/assets/images/git-token-terminal.gif'],
 		bullets: [],
 		description: [],
-		code: ''
-	}, {
-		title: 'GitToken Mechanics',
-		subtitle: 'Technical Overview',
-		gifs: ['./src/assets/images/demo.gif'],
-		bullets: [],
-		description: [],
-		code: ''
+		code: '\n\n\tThe GitToken Terminal is installed with\n\tthe GitToken CLI package\n\n\t>_ git token terminal\n\n\n\tThe GitToken Terminal listens to contract\n\tevents in real-time for a selected organization.\n\n\n\tThe terminal will eventually provide a\n\tdecentralized auction and exchange for\n\tGitToken projects.\n\n\t'
 	}, {
 		title: 'Torvalds Network',
-		subtitle: 'Connect to: https://torvalds.gittoken.io',
-		gifs: ['./src/assets/images/demo.gif'],
-		bullets: ['\n\t\t\tThe Torvalds Network is an Ethereum test network open to GitToken\n\t\t\tearly adopters.\n\t\t', '\n\t\t\tDISCLAIMER: This is a test network and values on this network do not hold\n\t\t\tany value or any future value. The network is purely for testing.\n\t\t'],
+		subtitle: 'new Web3(Web3.providers.HttpProvider("https://torvalds.gittoken.io")',
+		gifs: ['./src/assets/images/git-token-torvalds-network.gif'],
+		bullets: [],
 		description: [],
-		code: ''
+		code: '\n\n\tUsing a Generic Parity Development Chain + Bootnode\n\n\t{\n\t\t"name": "Torvalds",\n\t\t"engine": {\n\t\t\t"instantSeal": {\n\t\t\t\t"params": {}\n\t\t\t}\n\t\t},\n\t\t"params": {\n\t\t\t"accountStartNonce": "0x0",\n\t\t\t"maximumExtraDataSize": "0x20",\n\t\t\t"minGasLimit": "0x1388",\n\t\t\t"networkID": "0x9"\n\t\t},\n\t\t...\n\t}\n\t'
 	}, {
 		title: 'Funding Open-Source Software Development',
 		subtitle: 'Milestones, Auctions and Exchanges',
-		gifs: [''],
-		bullets: ['Completed milestones start new auctions', '\n\t\t\tA reserved supply of tokens is withheld by the organizations\' GitToken\n\t\t\tcontract for auction upon certain events (e.g. a new member added or a milestone completed)\n\t\t', 'Auction Model'],
+		gifs: ['./src/assets/images/git-token-contract-tests.gif'],
+		bullets: [],
 		description: [],
-		code: ''
+		code: '\n  function _initializeAuction(\n    Data storage self,\n    uint _initialPrice,\n    uint _delay,\n    uint _tokenLimitFactor,\n    bool _lockTokens\n  ) internal returns(uint[8]) {\n\t\t...\n\n    return ([\n      self.auctionRound,\n      self.auctionDetails[self.auctionRound].startDate,\n      self.auctionDetails[self.auctionRound].endDate,\n      self.lockTokenTransfersUntil,\n      self.auctionDetails[self.auctionRound].tokensOffered,\n      self.auctionDetails[self.auctionRound].initialPrice,\n      self.auctionDetails[self.auctionRound].fundLimit,\n      self.auctionDetails[self.auctionRound].tokenLimitFactor\n    ]);\n  }\n\t'
 	}, {
 		title: 'GitToken RoadMap',
 		subtitle: 'Q4 2017',
-		gifs: ['./src/assets/images/demo.gif'],
+		gifs: ['https://media.giphy.com/media/jnBXe38Ww2XAI/giphy.gif'],
 		bullets: [],
 		description: [],
-		code: ''
+		code: '\n\t- October 31st, 2017\n\t\t- Refactor GitToken Contracts\n\t\t\t- Cost Optimizations\n\t\t\t- Default Reward Point Changes\n\t\t\t- GitToken Registry Contract Integration\n\t\t- GitToken Terminal Updates\n\t\t\t- Ledger Nano Integration\n\t\t- GitToken Web Application\n\t\t\t- MetaMask Integrations\n\t- November 30th, 2017\n\t\t- Integrations and Partnerships with\n\t\t  Ethereum eco-system\n\t\t- GitToken Exchange & Market Makers\n\t\t  (alpha on Torvalds)\n\t\t- GitToken Terminal Updates\n\t\t\t- Auction & Exchanges UI Integration\n\t\t- Testing on public Ethereum test (Ropsten)\n\t\t  and live networks\n\t- January 1st, 2018\n\t\t- GitToken Mobile UI (alpha)\n\t\t- First GitToken Auctions on Main\n\t\t  Ethereum network\n\t\t- GitToken Web Application & Terminal\n\t\t  Updates\n\t\t\t- Contract voting integrations\n\t\t\t  (use git-vote?)\n\t\t- All Your Re-Base Are Belong To GitToken\n\t'
 	}],
 	activeSlide: 0
 };

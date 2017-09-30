@@ -36,7 +36,7 @@ class SlideComponent extends Component {
                   <h3>{d}</h3>
                 </div>
                 <br/>
-                {this.showCode({ code, lang: 'js' })}
+              {this.showCode({ code, lang: 'md', size: '150%' })}
                 <br/>
               </div>
             )

@@ -113,7 +113,6 @@ class HeaderComponent extends Component {
               <br/>
               <h3>COUNTDOWN TO ALPHA RELEASE</h3>
               <h2>{timeRemaining}</h2>
-              {/* <img width={'40%'} src={'https://media.giphy.com/media/jnBXe38Ww2XAI/giphy.gif'} /> */}
               <br/>
               <br/>
               {/* <div style={{

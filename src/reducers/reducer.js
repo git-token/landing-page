@@ -71,58 +71,23 @@ presentation: [{
 	bullets: [],
 	description: [`\n`],
 	code: `
-	/**
+	GitToken enables any GitHub organization to issue and
+	distribute Ethereum ERC20 tokens to incentivize and
+	reward contributors for contributing to organizations'
+	GitHub (public or private) repositories.
 
-	GitToken enables any GitHub organization to issue and distribute Ethereum
-	ERC20 tokens to incentivize and reward contributors for contributing to
-	organizations' GitHub (public or private) repositories.
+	Presentation Topics:
 
-	*/
-
-	// Any time a Pages site is built or results in a failed build.
-	gittoken.rewardValues['page_build']                       = 500 * 10**_decimals;
-
-	// Any time a Project Card is created, edited, moved, converted to an issue,
-	gittoken.rewardValues['project_card']                     = 250 * 10**_decimals;
-
-	// Any time a Project is created, edited, closed, reopened, or deleted.
-	gittoken.rewardValues['project']                          = 1000 * 10**_decimals;
-
-	// Any time a pull request is assigned, unassigned, labeled, unlabeled, opened,
-	// edited, closed, reopened, or synchronized (updated due to a new push in the
-	// branch that the pull request is tracking). Also any time a pull request
-	// review is requested, or a review request is removed.
-	gittoken.rewardValues['pull_request']                     = 2500 * 10**_decimals;
+	- Installing GitToken CLI
+	- Registering a GitHub Organization with GitToken Registry
+	- Git + GitHub + GitToken Work Flows
+	- Using the GitToken Terminal
+	- Torvalds Ethereum Network
+	- Funding Open-Source Software with GitToken
+	- GitToken Q4 2017 RoadMap
 
 	`
-}, {
-	title: 'Git + GitHub + GitToken',
-	subtitle: 'Using Git and GitHub Work Flows with GitToken',
-	gifs: [
-		'./src/assets/images/github_project_management.gif'
-	],
-	bullets: [],
-	description: [],
-	code: `
-
-
-	## Built to incentivize and reward project management and (open-source)
-	## software development.
-
-
-	## Integrates with Git command line interface (CLI) and graphical user interface
-	## (GUI) programs.
-
-
-	## Modeling toward incentivizing best practice works flows; Yet,
-	## flexible enough to customize for your team's work flows.
-
-
-	## Use GitHub webhook and organization settings to manage payload requests to
-	## the contract.
-
-	`,
-}, {
+},{
 	title: 'Getting Started with GitToken',
 	subtitle: 'Installation',
 	gifs: [
@@ -132,20 +97,13 @@ presentation: [{
 	description: [],
 	code: `
 
+	Install GitToken CLI programs using NPM or Yarn
 
-		## Install GitToken CLI programs using NPM or Yarn
+	>_ npm i -g git-token@alpha
 
+	or, using Yarn package manager
 
-
-		>_ npm i -g git-token@alpha
-
-
-
-		## or, using Yarn package manager
-
-
-
-		>_ yarn global add git-token@alpha
+	>_ yarn global add git-token@alpha
 
 
 	`
@@ -158,7 +116,7 @@ presentation: [{
 	bullets: [],
 	description: [],
 	code: `
-	## Register using the GitToken CLI program
+	Register using the GitToken CLI program
 
 	>_ git token register
 
@@ -166,69 +124,157 @@ presentation: [{
 
 	>_ git token rebase
 
-	## Rebase will eventually be used to migrate contracts when new
-	## versions of GitToken contracts are released
-
-
-
-
-
-	## All Your Re-Base Are Belong To Us ;)
+	The 'rebase' command will eventually be
+	used to migrate contracts when new versions
+	of GitToken contracts are released or when
+	migrating contracts to different blockchain
+	networks
 
 	`
 },{
-	title: 'GitToken Terminal',
-	subtitle: 'Search and interact with GitToken projects from the terminal!',
-	gifs: ['./src/assets/images/demo.gif'],
+	title: 'Git + GitHub + GitToken',
+	subtitle: 'Using Git and GitHub Work Flows with GitToken',
+	gifs: [
+		'./src/assets/images/github_project_management.gif'
+	],
 	bullets: [],
 	description: [],
-	code: ''
+	code: `
+
+
+	Built to incentivize and reward project
+	management and (open-source) software
+	development.
+
+
+	Integrates with Git command line interface
+	(CLI) and graphical user interface (GUI)
+	programs.
+
+
+	Modeling toward incentivizing best practice work
+	flows; Yet, flexible enough to customize for your
+	team's style.
+
+
+	Use GitHub webhook and organization settings to
+	manage payload requests to the contract.
+
+	`,
 },{
-	title: 'GitToken Mechanics',
-	subtitle: 'Technical Overview',
-	gifs: ['./src/assets/images/demo.gif'],
+	title: 'GitToken Terminal',
+	subtitle: 'Search and Interact with GitToken Projects from the Command Terminal!',
+	gifs: ['./src/assets/images/git-token-terminal.gif'],
 	bullets: [],
 	description: [],
-	code: ''
+	code: `
+
+	The GitToken Terminal is installed with
+	the GitToken CLI package
+
+	>_ git token terminal
+
+
+	The GitToken Terminal listens to contract
+	events in real-time for a selected organization.
+
+
+	The terminal will eventually provide a
+	decentralized auction and exchange for
+	GitToken projects.
+
+	`
 },{
 	title: 'Torvalds Network',
-	subtitle: 'Connect to: https://torvalds.gittoken.io',
-	gifs: ['./src/assets/images/demo.gif'],
-	bullets: [
-		`
-			The Torvalds Network is an Ethereum test network open to GitToken
-			early adopters.
-		`,
-		`
-			DISCLAIMER: This is a test network and values on this network do not hold
-			any value or any future value. The network is purely for testing.
-		`
-	],
+	subtitle: `new Web3(Web3.providers.HttpProvider("https://torvalds.gittoken.io")`,
+	gifs: ['./src/assets/images/git-token-torvalds-network.gif'],
+	bullets: [],
 	description: [],
-	code: ''
+	code: `
+
+	Using a Generic Parity Development Chain + Bootnode
+
+	{
+		"name": "Torvalds",
+		"engine": {
+			"instantSeal": {
+				"params": {}
+			}
+		},
+		"params": {
+			"accountStartNonce": "0x0",
+			"maximumExtraDataSize": "0x20",
+			"minGasLimit": "0x1388",
+			"networkID": "0x9"
+		},
+		...
+	}
+	`
 }, {
 	title: 'Funding Open-Source Software Development',
 	subtitle: 'Milestones, Auctions and Exchanges',
 	gifs: [
-		''
+		'./src/assets/images/git-token-contract-tests.gif'
 	],
-	bullets: [
-		`Completed milestones start new auctions`,
-		`
-			A reserved supply of tokens is withheld by the organizations' GitToken
-			contract for auction upon certain events (e.g. a new member added or a milestone completed)
-		`,
-		'Auction Model'
-	],
+	bullets: [],
 	description: [],
-	code: ''
+	code: `
+  function _initializeAuction(
+    Data storage self,
+    uint _initialPrice,
+    uint _delay,
+    uint _tokenLimitFactor,
+    bool _lockTokens
+  ) internal returns(uint[8]) {
+		...
+
+    return ([
+      self.auctionRound,
+      self.auctionDetails[self.auctionRound].startDate,
+      self.auctionDetails[self.auctionRound].endDate,
+      self.lockTokenTransfersUntil,
+      self.auctionDetails[self.auctionRound].tokensOffered,
+      self.auctionDetails[self.auctionRound].initialPrice,
+      self.auctionDetails[self.auctionRound].fundLimit,
+      self.auctionDetails[self.auctionRound].tokenLimitFactor
+    ]);
+  }
+	`
 },{
 	title: 'GitToken RoadMap',
 	subtitle: 'Q4 2017',
-	gifs: ['./src/assets/images/demo.gif'],
+	gifs: ['https://media.giphy.com/media/jnBXe38Ww2XAI/giphy.gif'],
 	bullets: [],
 	description: [],
-	code: ''
+	code: `
+	- October 31st, 2017
+		- Refactor GitToken Contracts
+			- Cost Optimizations
+			- Default Reward Point Changes
+			- GitToken Registry Contract Integration
+		- GitToken Terminal Updates
+			- Ledger Nano Integration
+		- GitToken Web Application
+			- MetaMask Integrations
+	- November 30th, 2017
+		- Integrations and Partnerships with
+		  Ethereum eco-system
+		- GitToken Exchange & Market Makers
+		  (alpha on Torvalds)
+		- GitToken Terminal Updates
+			- Auction & Exchanges UI Integration
+		- Testing on public Ethereum test (Ropsten)
+		  and live networks
+	- January 1st, 2018
+		- GitToken Mobile UI (alpha)
+		- First GitToken Auctions on Main
+		  Ethereum network
+		- GitToken Web Application & Terminal
+		  Updates
+			- Contract voting integrations
+			  (use git-vote?)
+		- All Your Re-Base Are Belong To GitToken
+	`
 }],
 activeSlide: 0
 }
