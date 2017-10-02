@@ -49146,28 +49146,11 @@ var HeaderComponent = function (_Component) {
                 { style: { fontSize: '72px', marginTop: '-50px' } },
                 'GitToken'
               ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
               _react2.default.createElement(
                 'h2',
                 null,
                 'Issue and Earn Ethereum ERC20 Tokens for your GitHub Contributions'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'COUNTDOWN TO ALPHA RELEASE'
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                timeRemaining
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
+              )
             )
           )
         )

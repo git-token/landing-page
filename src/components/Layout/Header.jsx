@@ -105,34 +105,7 @@ class HeaderComponent extends Component {
                 <circle cx="250" cy="200" r="8" fill="#2a1e38"/>
               </svg> */}
               <h1 style={{ fontSize: '72px', marginTop: '-50px' }}>GitToken</h1>
-              <br/>
-              <br/>
               <h2 >Issue and Earn Ethereum ERC20 Tokens for your GitHub Contributions</h2>
-              <br/>
-              <br/>
-              <br/>
-              <h3>COUNTDOWN TO ALPHA RELEASE</h3>
-              <h2>{timeRemaining}</h2>
-              <br/>
-              <br/>
-              {/* <div style={{
-                width: '30%',
-                margin: 'auto',
-                display: 'block',
-                marginTop: '25px'
-              }}>
-                <Button
-                  disabled={true}
-                  bsStyle={'primary'}
-                  block>
-                  <a
-                    href="https://gittoken.io"
-                    target="_blank"
-                    style={{ color: 'white' }}>
-                    Demo Alpha
-                  </a>
-                </Button>
-              </div> */}
             </div>
           </Col>
         </Row>
