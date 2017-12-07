@@ -17,9 +17,9 @@ export default class MainLogo extends Component {
 				/>
 
 				<circle cx="255" cy="127" r="14" fill="#cc5333"/>
-				<circle cx="255" cy="127" r="8" fill="#2a1e38"/>
+				<circle cx="255" cy="127" r="8" fill="#320551"/>
 				<circle cx="200" cy="200" r="14" fill="#cc5333"/>
-				<circle cx="200" cy="200" r="8" fill="#2a1e38"/>
+				<circle cx="200" cy="200" r="8" fill="#320551"/>
 
 				{/* <path className={"path"} d="M 300 150 L 200 100 L 100 150 L 100 250 L 200 300 L 300 250 L 300 150 L 200 100 "
 					fill="transparent"

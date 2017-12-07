@@ -4,17 +4,19 @@
   "description": "Landing Page for GitToken",
   "main": "./dist/index",
   "scripts": {
-    "dev": "webpack-dev-server --inline",
+    "dev": "webpack-dev-server --inline --host 0.0.0.0",
     "build-ui": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "author": "GitToken",
   "license": "MIT",
   "dependencies": {
     "countdown": "^2.6.0",
+    "gittoken-svg-icons": "0.0.8",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
     "react-highlight": "^0.10.0",
+    "react-icons": "^2.2.7",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-bootstrap": "^0.24.2",
@@ -29,7 +31,6 @@
     "babel-plugin-inline-import": "^2.0.5",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.5.1",
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.23.0",

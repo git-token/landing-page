@@ -16,11 +16,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /.jsx?$/,
+        test: /\.(js|jsx)?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react', 'stage-0']
+          plugins: ['transform-runtime', 'transform-react-jsx'],
+          presets: ['env', 'react', 'stage-0', 'es2015']
         }
       }, {
         test : /.json?$/,

@@ -6,9 +6,9 @@ export default class NetworkLogo extends Component {
 	}
 
 	render() {
-		const { width } = this.props
+		const { width, height, style } = this.props
 		return (
-			<svg width={width} viewBox="0 0 400 400" >
+			<svg width={width} height={height} viewBox="0 0 400 400" style={style}>
 				<path className={"path"} d="M 100 250 A 50 50 0 1 1 300 250 A 50 50 0 1 0 100 200 A 50 50 0 1 1 300 200 A 50 50 0 1 1 100 150 A 50 50 0 1 0 300 150 A 50 50 0 1 1 100 200 A 50 50 0 1 0 300 200 "
 					fill="transparent"
 					strokeLinejoin={"round"}

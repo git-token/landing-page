@@ -1,4 +1,5 @@
 const INITITAL_STATE = {
+menuModal: false,
 timeRemaining: '',
 route: '',
 roadmap: [{
@@ -297,6 +298,12 @@ export default function main(state=INITITAL_STATE, action) {
 			return {
 				...state,
 				activeSlide: action.value
+			}
+			break;
+		case 'UPDATE':
+			return {
+				...state,
+				[action.id]: action.value
 			}
 			break;
 		default:

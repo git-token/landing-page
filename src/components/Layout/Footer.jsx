@@ -17,7 +17,10 @@ class FooterComponent extends Component {
 
   render() {
     return (
-      <div style={{ background: 'linear-gradient(135deg, #0c0019, #493f5b)', color: 'white' }}>
+      <div style={{
+        // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
+        color: 'white'
+      }}>
         <Row style={{ }}>
           <Col sm={4}></Col>
           <Col sm={4}>
@@ -26,8 +29,8 @@ class FooterComponent extends Component {
                 marginBottom: '50px',
                 paddingTop: '100px'
               }}>
-              <MainLogo height={"100px"}/>
-            <h4>GitToken Copyright 2017-2018</h4>
+              <MainLogo height={"100px"} style={{ }}/>
+              <h4 style={{ fontWeight: 100 }}>GitToken 2017-2018</h4>
             </div>
           </Col>
           <Col sm={4}></Col>

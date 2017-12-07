@@ -1,49 +1,64 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 
 import {
-  Row, Col, Panel
+  Grid,
+  Row,
+  Col,
+  Panel,
+  ButtonGroup,
+  Button
 } from 'react-bootstrap'
+
+import MainLogo from 'gittoken-svg-icons/dist/MainLogo'
 
 class WelcomeComponent extends Component {
   constructor(opts) {
     super(opts)
   }
 
-
-
-  render() {
+  gif() {
     return (
-      <div style={{ textAlign: 'center', background: 'linear-gradient(45deg, #0c0019, #493f5b)'}}>
-        <Row>
-          <Col sm={8}>
-            <div style={{ marginTop: '100px' }}>
-              <Panel style={{ backgroundColor: 'rgba(0,0,0,0.5)', marginLeft: '25px', marginRight: '25px' }}>
-                <img style={{ width: "100%"  }} src="./src/assets/images/demo.gif" />
-              </Panel>
-            </div>
-          </Col>
-          <Col sm={4}>
-	    <div style={{ textAlign: 'center', color: 'white', marginTop: '250px', marginRight: '25px' }}>
-              <h3>
-		Open-source software for GitHub organizations to incentivize collaboration and development. 
-	      </h3>
-	      <br/>
-	      <h3>
-		Issue and distribute ERC-20 Ethereum tokens when contributions are made to a repository.
-	      </h3>
-	      <br/>
-	      <h3>
-		Auction issued tokens to raise funding for development costs.
-	      </h3>
-            </div>
-	  </Col>
-        </Row>
+      <div style={{ textAlign: 'center' }}>
+        <img style={{ width: "100%" }} src="https://raw.githubusercontent.com/git-token/media/master/gifs/git-token-register.gif" />
       </div>
+
     )
   }
 
+  render() {
+
+    return (
+      <div style={{
+        // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
+        fontWeight: '100'
+      }}>
+        <Grid>
+          <Row>
+            <Col sm={12} xs={12} md={6} lg={6}>
+              <blockquote>
+                <h1 style={{ fontSize: '48px' }}>Earn Reward Points [Ethereum Tokens] for Contributing to GitHub Organizations</h1>
+              </blockquote>
+              <br/>
+              <Row>
+                <Col sm={6}>
+                  <Button bsSize={'sm'} bsStyle={'warning'} style={{ margin: '5px' }} block>Register your organization</Button>
+                </Col>
+                <Col sm={6}>
+                  <Button bsSize={'sm'} bsStyle={'info'} style={{ margin: '5px' }} block>Learn More About GitToken</Button>
+                </Col>
+              </Row>
+
+              <br/>
+            </Col>
+            <Col sm={12} xs={12} md={6} lg={6}>
+              {this.gif()}
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    );
+  }
 }
 
 const mapStoreToProps = (store, props) => {
