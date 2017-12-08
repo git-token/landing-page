@@ -11,6 +11,7 @@ import {
 } from 'react-bootstrap'
 
 import { FormItem } from '../Forms/index'
+import { newsletterActions } from '../../actions/index'
 
 class NewsletterComponent extends Component {
   constructor() {
@@ -21,6 +22,12 @@ class NewsletterComponent extends Component {
     const { id, value } = evt.target
     const { dispatch } = this.props
     dispatch({ type: 'UPDATE', id, value })
+  }
+
+  register() {
+    const { dispatch, main: { email } } = this.props
+    console.log('newsletterActions', newsletterActions)
+    dispatch(newsletterActions.register({ email }))
   }
 
   render() {
@@ -34,16 +41,20 @@ class NewsletterComponent extends Component {
         <Grid>
           <Row>
             <Col xs={12}>
-              <FormItem
-                type={'text'}
-                value={email ? email : ''}
-                placeholder={'Please enter your email'}
-                onChange={this.setValue.bind(this)}
-                validationState={() => { return null }}
-                label={'Sign Up for the GitToken Newsletter'}
-                controlId={'email'}
-                help={"Please enter your email (e.g. your@email.com)"}
-              />
+              <form>
+                <FormItem
+                  type={'text'}
+                  value={email ? email : ''}
+                  placeholder={'Please enter your email'}
+                  onChange={this.setValue.bind(this)}
+                  validationState={() => { return null }}
+                  label={'Sign Up for the GitToken Newsletter'}
+                  controlId={'email'}
+                  help={"Please enter your email (e.g. your@email.com)"}
+                  onClick={this.register.bind(this)}
+                  button={'Sign Up'}
+                />
+              </form>
             </Col>
           </Row>
         </Grid>

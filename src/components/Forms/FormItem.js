@@ -3,7 +3,9 @@ import {
   FormControl,
   HelpBlock,
   FormGroup,
-  ControlLabel
+  ControlLabel,
+  InputGroup,
+  Button
 } from 'react-bootstrap'
 
 export default class FormItem extends Component {
@@ -23,25 +25,38 @@ export default class FormItem extends Component {
       help,
       min,
       max,
-      bsSize
+      bsSize,
+      onClick,
+      button
     } = this.props
 
     return (
       <FormGroup
-        bsSize={ bsSize ? bsSize : 'small' }
+        bsSize={ bsSize ? bsSize : 'sm' }
         controlId={controlId}
         validationState={validationState()} >
-          <ControlLabel>{label}</ControlLabel>
-          <FormControl
-            type={type}
-            value={value}
-            placeholder={placeholder}
-            onChange={onChange}
-            min={min}
-            max={max}
-          />
-          <FormControl.Feedback />
-          { help ? <HelpBlock>{help}</HelpBlock> : null }
+          <InputGroup>
+            <ControlLabel>{label}</ControlLabel>
+            <FormControl
+              type={type}
+              value={value}
+              placeholder={placeholder}
+              onChange={onChange}
+              min={min}
+              max={max}
+            />
+            { help ? <HelpBlock>{help}</HelpBlock> : null }
+            <FormControl.Feedback />
+            { button ? <InputGroup.Button>
+              <Button
+                style={{ marginTop: '-5px' }}
+                bsSize={ bsSize ? bsSize : 'sm' }
+                onClick={onClick}
+                >
+                {button}
+              </Button>
+            </InputGroup.Button> : null }
+          </InputGroup>
       </FormGroup>
     )
   }
