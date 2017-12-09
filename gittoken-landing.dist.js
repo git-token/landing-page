@@ -37022,11 +37022,12 @@ var WelcomeComponent = function (_Component) {
   (0, _createClass3.default)(WelcomeComponent, [{
     key: 'gif',
     value: function gif() {
-      return _react2.default.createElement(
-        'div',
-        { style: { textAlign: 'center' } },
-        _react2.default.createElement('img', { style: { width: "100%" }, src: 'https://raw.githubusercontent.com/git-token/media/master/gifs/git-token-register.gif' })
-      );
+      return _react2.default.createElement('div', { style: { textAlign: 'center' } });
+    }
+  }, {
+    key: 'signup',
+    value: function signup() {
+      location.href = "https://alpha.gittoken.io/auth/github";
     }
   }, {
     key: 'render',
@@ -37036,7 +37037,9 @@ var WelcomeComponent = function (_Component) {
         'div',
         { style: {
             // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
-            fontWeight: '100'
+            fontWeight: '100',
+            paddingTop: '-50px',
+            marginBottom: '50px'
           } },
         _react2.default.createElement(
           _reactBootstrap.Grid,
@@ -37046,45 +37049,83 @@ var WelcomeComponent = function (_Component) {
             null,
             _react2.default.createElement(
               _reactBootstrap.Col,
-              { sm: 12, xs: 12, md: 6, lg: 6 },
+              { sm: 12, xs: 12, md: 6, lg: 6, style: { zIndex: '2', position: 'relative' } },
               _react2.default.createElement(
                 'blockquote',
                 null,
                 _react2.default.createElement(
-                  'h1',
-                  { style: { fontSize: '48px' } },
-                  'Earn Reward Points [Ethereum Tokens] for Contributing to GitHub Organizations'
+                  'p',
+                  { style: { fontSize: '55px' } },
+                  'Issue Reward Points for GitHub Contributions'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { style: { fontSize: '26px' } },
+                  _react2.default.createElement(
+                    'i',
+                    { className: 'text-success' },
+                    'Developers'
+                  ),
+                  ',',
+                  _react2.default.createElement(
+                    'i',
+                    { className: 'text-warning' },
+                    ' Project Managers'
+                  ),
+                  ', and',
+                  _react2.default.createElement(
+                    'i',
+                    { className: 'text-info' },
+                    ' Users'
+                  ),
+                  ' earn Ethereum ERC20 tokens when contributing to GitToken enabled organizations'
                 )
               ),
               _react2.default.createElement('br', null),
               _react2.default.createElement(
-                _reactBootstrap.Row,
-                null,
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { sm: 6 },
-                  _react2.default.createElement(
-                    _reactBootstrap.Button,
-                    { bsSize: 'sm', bsStyle: 'warning', style: { margin: '5px' }, block: true },
-                    'Register your organization'
-                  )
-                ),
-                _react2.default.createElement(
-                  _reactBootstrap.Col,
-                  { sm: 6 },
-                  _react2.default.createElement(
-                    _reactBootstrap.Button,
-                    { bsSize: 'sm', bsStyle: 'info', style: { margin: '5px' }, block: true },
-                    'Learn More About GitToken'
-                  )
-                )
-              ),
-              _react2.default.createElement('br', null)
+                _reactBootstrap.Button,
+                {
+                  bsSize: 'lg',
+                  bsStyle: 'info',
+                  style: { margin: '5px' },
+                  onClick: this.signup.bind(this),
+                  block: true
+                },
+                'Register & Enable Your Organization'
+              )
             ),
             _react2.default.createElement(
               _reactBootstrap.Col,
-              { sm: 12, xs: 12, md: 6, lg: 6 },
-              this.gif()
+              { smHidden: true, xsHidden: true, md: 6, lg: 6 },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  'svg',
+                  { height: "950px", viewBox: '0 0 400 400', style: { marginLeft: '-200px', marginTop: '-250px', zIndex: '-1' } },
+                  _react2.default.createElement(
+                    'defs',
+                    null,
+                    _react2.default.createElement(
+                      'radialGradient',
+                      { id: 'g1', fx: '50%', fy: '50%', cx: '50%', cy: '50%', r: '50%' },
+                      _react2.default.createElement('stop', { stopColor: 'white', offset: '10%' }),
+                      _react2.default.createElement('stop', { stopColor: '#320551', offset: '100%' })
+                    )
+                  ),
+                  _react2.default.createElement('circle', { cx: '200', cy: '200', r: '200', style: { fill: 'url(#g1)' } }),
+                  _react2.default.createElement('path', { d: 'M 200 200 L 300 150 L 300 250 L 200 300 L 100 250 L 100 150 L 200 100 L 255 127 ',
+                    fill: 'transparent',
+                    strokeLinejoin: "round",
+                    stroke: '#cc5333',
+                    strokeWidth: '12'
+                  }),
+                  _react2.default.createElement('circle', { cx: '255', cy: '127', r: '14', fill: '#cc5333' }),
+                  _react2.default.createElement('circle', { cx: '255', cy: '127', r: '8', fill: '#f0e2ff' }),
+                  _react2.default.createElement('circle', { cx: '200', cy: '200', r: '14', fill: '#cc5333' }),
+                  _react2.default.createElement('circle', { cx: '200', cy: '200', r: '8', fill: '#fff' })
+                )
+              )
             )
           )
         )
@@ -51731,8 +51772,13 @@ var NewsletterComponent = function (_Component) {
       return _react2.default.createElement(
         'div',
         { style: {
-            // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
-            fontWeight: '100'
+            background: '#210a3a',
+            fontWeight: '400',
+            paddingBottom: '100px',
+            paddingTop: '100px',
+            marginTop: '-150px',
+            zIndex: '1',
+            position: 'relative'
           } },
         _react2.default.createElement(
           _reactBootstrap.Grid,
@@ -51744,21 +51790,29 @@ var NewsletterComponent = function (_Component) {
               _reactBootstrap.Col,
               { xs: 12 },
               _react2.default.createElement(
+                'p',
+                { style: { fontSize: '36px' } },
+                'Subscribe to the Newsletter'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
                 'form',
                 null,
                 _react2.default.createElement(_index.FormItem, {
-                  type: 'text',
+                  type: 'email',
                   value: email ? email : '',
                   placeholder: 'Please enter your email',
                   onChange: this.setValue.bind(this),
                   validationState: function validationState() {
                     return null;
                   },
-                  label: 'Sign Up for the GitToken Newsletter',
+                  label: null,
                   controlId: 'email',
                   help: "Please enter your email (e.g. your@email.com)",
                   onClick: this.register.bind(this),
-                  button: 'Sign Up'
+                  bsStyle: 'warning',
+                  button: 'Subscribe'
                 })
               )
             )
@@ -51862,6 +51916,7 @@ var FormItem = function (_Component) {
       var min = _props.min;
       var max = _props.max;
       var bsSize = _props.bsSize;
+      var bsStyle = _props.bsStyle;
       var onClick = _props.onClick;
       var button = _props.button;
 
@@ -51900,8 +51955,9 @@ var FormItem = function (_Component) {
             _react2.default.createElement(
               _reactBootstrap.Button,
               {
-                style: { marginTop: '-5px' },
+                style: { marginTop: '-30px' },
                 bsSize: bsSize ? bsSize : 'sm',
+                bsStyle: bsStyle ? bsStyle : 'default',
                 onClick: onClick
               },
               button
@@ -52963,17 +53019,22 @@ var HeaderComponent = function (_Component) {
     value: function NavBarLogo() {
       return _react2.default.createElement(
         'svg',
-        { width: "70px", height: "60px", viewBox: '0 0 400 400', style: { margin: '-18px' } },
-        _react2.default.createElement('path', { d: 'M 200 200 L 300 150 L 300 250 L 200 300 L 100 250 L 100 150 L 200 100 L 255 127 ',
+        { width: "50%", viewBox: '0 0 2500 1500' },
+        _react2.default.createElement('path', { d: 'M 350 250 L 550 350 L 350 450 L 150 350 L 150 150 L 350 50 L 550 150 ',
           fill: 'transparent',
           strokeLinejoin: "round",
           stroke: '#cc5333',
-          strokeWidth: '18'
+          strokeWidth: '48'
         }),
-        _react2.default.createElement('circle', { cx: '255', cy: '127', r: '18', fill: '#cc5333' }),
-        _react2.default.createElement('circle', { cx: '255', cy: '127', r: '12', fill: '#493f5b' }),
-        _react2.default.createElement('circle', { cx: '200', cy: '200', r: '18', fill: '#cc5333' }),
-        _react2.default.createElement('circle', { cx: '200', cy: '200', r: '12', fill: '#493f5b' })
+        _react2.default.createElement('circle', { cx: '550', cy: '150', r: '48', fill: '#cc5333' }),
+        _react2.default.createElement('circle', { cx: '550', cy: '150', r: '26', fill: '#320551' }),
+        _react2.default.createElement('circle', { cx: '350', cy: '250', r: '48', fill: '#cc5333' }),
+        _react2.default.createElement('circle', { cx: '350', cy: '250', r: '26', fill: '#320551' }),
+        _react2.default.createElement(
+          'text',
+          { x: '600', y: '450', fontSize: '400px', fill: '#fff' },
+          'GitToken'
+        )
       );
     }
   }, {
@@ -52984,7 +53045,7 @@ var HeaderComponent = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { style: { height: '250px' } },
+        { style: { height: '125px', marginTop: '50px', zIndex: '2', position: 'relative' } },
         _react2.default.createElement(
           _reactBootstrap.Grid,
           null,
@@ -52993,13 +53054,8 @@ var HeaderComponent = function (_Component) {
             null,
             _react2.default.createElement(
               _reactBootstrap.Col,
-              { xs: 6, sm: 4, md: 4, lg: 4 },
-              _react2.default.createElement(
-                'h1',
-                null,
-                _react2.default.createElement(_MainLogo2.default, { height: '15%', width: '20%', style: { margin: '-6%', marginRight: '-5%' } }),
-                ' GitToken'
-              )
+              { xs: 10, sm: 4, md: 4, lg: 4 },
+              this.NavBarLogo()
             ),
             _react2.default.createElement(
               _reactBootstrap.Col,
@@ -53045,34 +53101,7 @@ var HeaderComponent = function (_Component) {
                     _react2.default.createElement(
                       'a',
                       { href: 'https://github.com/git-token', target: '_blank' },
-                      'Road Map'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactBootstrap.Button,
-                    { bsStyle: 'link' },
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://github.com/git-token', target: '_blank' },
-                      'Software'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactBootstrap.Button,
-                    { bsStyle: 'link' },
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://medium.com/gittoken', target: '_blank' },
-                      'Publications'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    _reactBootstrap.Button,
-                    { bsStyle: 'link' },
-                    _react2.default.createElement(
-                      'a',
-                      { href: 'https://gitter.im/git-token/Lobby', target: '_blank' },
-                      'Contact'
+                      'GitHub'
                     )
                   )
                 )
@@ -53355,9 +53384,10 @@ var BodyComponent = function (_Component) {
         'div',
         { style: {
             // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
-            fontWeight: '100'
+            fontWeight: '400'
           } },
         _react2.default.createElement(_Pages.Welcome, null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(_Pages.Newsletter, null)
       );
     }
@@ -53634,15 +53664,6 @@ var MenuModalComponent = function (_Component) {
             _reactBootstrap.Modal.Header,
             { closeButton: true },
             _react2.default.createElement(
-              _reactBootstrap.Modal.Title,
-              null,
-              '(Products|Features|Options|Settings)'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Modal.Body,
-            null,
-            _react2.default.createElement(
               _reactBootstrap.ButtonGroup,
               null,
               _react2.default.createElement(
@@ -53660,7 +53681,16 @@ var MenuModalComponent = function (_Component) {
                 _react2.default.createElement(
                   'a',
                   { href: 'https://github.com/git-token', target: '_blank' },
-                  'Road Map'
+                  'GitHub'
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { bsStyle: 'link' },
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://gitter.im/git-token/Lobby', target: '_blank' },
+                  'Gitter'
                 )
               ),
               _react2.default.createElement(
@@ -53669,7 +53699,7 @@ var MenuModalComponent = function (_Component) {
                 _react2.default.createElement(
                   'a',
                   { href: 'https://github.com/git-token', target: '_blank' },
-                  'Software'
+                  'Road Map'
                 )
               ),
               _react2.default.createElement(
@@ -53679,15 +53709,6 @@ var MenuModalComponent = function (_Component) {
                   'a',
                   { href: 'https://medium.com/gittoken', target: '_blank' },
                   'Publications'
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Button,
-                { bsStyle: 'link' },
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://gitter.im/git-token/Lobby', target: '_blank' },
-                  'Contact'
                 )
               )
             )
