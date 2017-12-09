@@ -26,18 +26,20 @@ class MenuModalComponent extends Component {
       <div style={{ fontWeight: '100' }}>
         <Modal bsSize={'lg'} show={menuModal} onHide={this.close.bind(this)}>
           <Modal.Header closeButton>
-            <Modal.Title>(Products|Features|Options|Settings)</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
+            {/* <Modal.Title>(Products|Features|Options|Settings)</Modal.Title> */}
             <ButtonGroup>
               <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">What is GitToken?</a></Button>
+              <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">GitHub</a></Button>
+              <Button bsStyle={'link'}><a href="https://gitter.im/git-token/Lobby" target="_blank">Gitter</a></Button>
               <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Road Map</a></Button>
-              <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Software</a></Button>
               <Button bsStyle={'link'}><a href="https://medium.com/gittoken" target="_blank">Publications</a></Button>
-              <Button bsStyle={'link'}><a href="https://gitter.im/git-token/Lobby" target="_blank">Contact</a></Button>
+
               {/* <Button bsStyle={'link'}><a href="https://github.com/git-token/documentation/wiki/Motivation" target="_blank">Wiki</a></Button> */}
             </ButtonGroup>
-          </Modal.Body>
+          </Modal.Header>
+          {/* <Modal.Body>
+
+          </Modal.Body> */}
 
           <Modal.Footer>
             <div style={{ textAlign: 'center' }}>

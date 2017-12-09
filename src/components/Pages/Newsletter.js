@@ -35,24 +35,33 @@ class NewsletterComponent extends Component {
 
     return (
       <div style={{
-        // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
-        fontWeight: '100'
+        background: '#210a3a',
+        fontWeight: '400',
+        paddingBottom: '100px',
+        paddingTop: '100px',
+        marginTop: '-150px',
+        zIndex: '1',
+        position: 'relative'
       }}>
         <Grid>
           <Row>
             <Col xs={12}>
+              <p style={{ fontSize: '36px' }}>Subscribe to the Newsletter</p>
+              <br/>
+              <br/>
               <form>
                 <FormItem
-                  type={'text'}
+                  type={'email'}
                   value={email ? email : ''}
                   placeholder={'Please enter your email'}
                   onChange={this.setValue.bind(this)}
                   validationState={() => { return null }}
-                  label={'Sign Up for the GitToken Newsletter'}
+                  label={null}
                   controlId={'email'}
                   help={"Please enter your email (e.g. your@email.com)"}
                   onClick={this.register.bind(this)}
-                  button={'Sign Up'}
+                  bsStyle={'warning'}
+                  button={'Subscribe'}
                 />
               </form>
             </Col>

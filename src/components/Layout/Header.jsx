@@ -21,18 +21,19 @@ class HeaderComponent extends Component {
 
   NavBarLogo() {
     return (
-      <svg width={"70px"} height={"60px"} viewBox="0 0 400 400" style={{ margin: '-18px' }}>
-				<path d="M 200 200 L 300 150 L 300 250 L 200 300 L 100 250 L 100 150 L 200 100 L 255 127 "
+      <svg width={"50%"} viewBox="0 0 2500 1500" >
+				<path d="M 350 250 L 550 350 L 350 450 L 150 350 L 150 150 L 350 50 L 550 150 "
 					fill="transparent"
 					strokeLinejoin={"round"}
 					stroke="#cc5333"
-					strokeWidth="18"
+					strokeWidth="48"
 				/>
 
-				<circle cx="255" cy="127" r="18" fill="#cc5333"/>
-				<circle cx="255" cy="127" r="12" fill="#493f5b"/>
-				<circle cx="200" cy="200" r="18" fill="#cc5333"/>
-				<circle cx="200" cy="200" r="12" fill="#493f5b"/>
+				<circle cx="550" cy="150" r="48" fill="#cc5333"/>
+				<circle cx="550" cy="150" r="26" fill="#320551"/>
+				<circle cx="350" cy="250" r="48" fill="#cc5333"/>
+				<circle cx="350" cy="250" r="26" fill="#320551"/>
+        <text x="600" y="450" fontSize="400px" fill="#fff">GitToken</text>
 
 				{/* <path className={"path"} d="M 300 150 L 200 100 L 100 150 L 100 250 L 200 300 L 300 250 L 300 150 L 200 100 "
 					fill="transparent"
@@ -50,12 +51,13 @@ class HeaderComponent extends Component {
     const { dispatch } = this.props
 
     return (
-      <div style={{ height: '250px' }}>
+      <div style={{ height: '125px', marginTop: '50px', zIndex: '2', position: 'relative' }}>
         <Grid>
           <Row>
-            <Col xs={6} sm={4} md={4} lg={4}>
-              <h1><MainLogo height={'15%'} width={'20%'} style={{ margin: '-6%', marginRight: '-5%' }} /> GitToken</h1>
+            <Col xs={10} sm={4} md={4} lg={4}>
+              {this.NavBarLogo()}
             </Col>
+
             <Col lgHidden mdHidden xs={2} sm={8}>
               <div style={{ textAlign: 'right' }}>
                 <ButtonGroup>
@@ -66,14 +68,15 @@ class HeaderComponent extends Component {
                 <MenuModal />
               </div>
             </Col>
+
             <Col xsHidden smHidden md={8}>
               <div style={{ textAlign: 'right', marginRight: '50px', marginLeft: '100px' }}>
                 <ButtonGroup>
                   <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">What is GitToken?</a></Button>
-                  <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Road Map</a></Button>
-                  <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Software</a></Button>
-                  <Button bsStyle={'link'}><a href="https://medium.com/gittoken" target="_blank">Publications</a></Button>
-                  <Button bsStyle={'link'}><a href="https://gitter.im/git-token/Lobby" target="_blank">Contact</a></Button>
+                  <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">GitHub</a></Button>
+                  {/* <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Road Map</a></Button> */}
+                  {/* <Button bsStyle={'link'}><a href="https://medium.com/gittoken" target="_blank">Publications</a></Button> */}
+                  {/* <Button bsStyle={'link'}><a href="https://gitter.im/git-token/Lobby" target="_blank">Contact</a></Button> */}
                   {/* <Button bsStyle={'link'}><a href="https://github.com/git-token/documentation/wiki/Motivation" target="_blank">Wiki</a></Button> */}
                 </ButtonGroup>
               </div>

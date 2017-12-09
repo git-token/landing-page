@@ -34,9 +34,10 @@ class BodyComponent extends Component {
     return (
       <div style={{
         // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
-        fontWeight: '100'
+        fontWeight: '400'
       }}>
         <Welcome />
+        <br/>
         <Newsletter />
       </div>
     );

@@ -26,6 +26,7 @@ export default class FormItem extends Component {
       min,
       max,
       bsSize,
+      bsStyle,
       onClick,
       button
     } = this.props
@@ -49,8 +50,9 @@ export default class FormItem extends Component {
             <FormControl.Feedback />
             { button ? <InputGroup.Button>
               <Button
-                style={{ marginTop: '-5px' }}
+                style={{ marginTop: '-30px' }}
                 bsSize={ bsSize ? bsSize : 'sm' }
+                bsStyle={ bsStyle ? bsStyle : 'default' }
                 onClick={onClick}
                 >
                 {button}
