@@ -13,7 +13,7 @@
     "axios": "^0.17.1",
     "countdown": "^2.6.0",
     "gittoken-react-components": "0.0.1",
-    "gittoken-reducers": "0.0.16",
+    "gittoken-reducers": "0.0.17",
     "gittoken-svg-icons": "0.0.8",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
