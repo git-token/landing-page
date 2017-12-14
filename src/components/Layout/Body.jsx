@@ -29,11 +29,8 @@ class BodyComponent extends Component {
     const { dispatch, Actions: { account } } = this.props
     setTimeout(() => {
       account.getProfile({})
+      dispatch(account.handleMessages())
     }, 3000)
-
-
-
-    // dispatch(account.handleMessages())
   }
 
   gif() {
