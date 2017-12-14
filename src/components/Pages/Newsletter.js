@@ -31,7 +31,7 @@ class NewsletterComponent extends Component {
   }
 
   render() {
-    const { main: { email } } = this.props
+    const { Account: { email } } = this.props
 
     return (
       <div style={{
@@ -74,7 +74,7 @@ class NewsletterComponent extends Component {
 
 const mapStoreToProps = (store, props) => {
   return {
-    main: store.main
+    Account: store.Account
   }
 }
 

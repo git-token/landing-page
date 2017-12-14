@@ -1,17 +1,19 @@
 {
   "name": "gittoken-landing-page",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Landing Page for GitToken",
   "main": "./dist/index",
   "scripts": {
-    "dev": "webpack-dev-server --inline --host 0.0.0.0",
-    "build-ui": "./node_modules/.bin/webpack --config webpack.config.js"
+    "start:dev": "webpack-dev-server --inline --host 0.0.0.0",
+    "build:ui": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "author": "GitToken",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1",
     "countdown": "^2.6.0",
+    "gittoken-react-components": "0.0.1",
+    "gittoken-reducers": "0.0.16",
     "gittoken-svg-icons": "0.0.8",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
@@ -38,6 +40,7 @@
     "chai": "^4.0.1",
     "source-map-loader": "^0.2.1",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^2.5.0",
+    "worker-loader": "^1.1.0"
   }
 }

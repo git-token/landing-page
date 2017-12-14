@@ -20,6 +20,22 @@ class BodyComponent extends Component {
     super(opts)
   }
 
+  componentWillMount() {
+    const { dispatch, Actions: { account } } = this.props
+
+  }
+
+  componentDidMount() {
+    const { dispatch, Actions: { account } } = this.props
+    setTimeout(() => {
+      account.getProfile({})
+    }, 3000)
+
+
+
+    // dispatch(account.handleMessages())
+  }
+
   gif() {
     return (
       <div style={{ textAlign: 'center' }}>
@@ -30,7 +46,6 @@ class BodyComponent extends Component {
   }
 
   render() {
-
     return (
       <div style={{
         // background: 'linear-gradient(135deg, #0c0019, #493f5b)',
@@ -46,7 +61,7 @@ class BodyComponent extends Component {
 
 const mapStoreToProps = (store, props) => {
   return {
-    main: store.main
+    Actions: store.Actions
   }
 }
 

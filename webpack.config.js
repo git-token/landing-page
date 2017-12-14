@@ -23,7 +23,12 @@ module.exports = {
           plugins: ['transform-runtime', 'transform-react-jsx'],
           presets: ['env', 'react', 'stage-0', 'es2015']
         }
-      }, {
+      },{
+        test: /\.worker\.js$/,
+        use: {
+          loader: 'worker-loader'
+        }
+      },{
         test : /.json?$/,
         loader : "json-loader"
       }

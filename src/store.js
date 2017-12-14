@@ -5,6 +5,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
 
 import * as reducers from './reducers/index'
+import GitTokenReducers from 'gittoken-reducers/dist/index'
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
@@ -17,6 +18,7 @@ const middleware = routerMiddleware(history)
 const store = createStore(
   combineReducers({
     ...reducers,
+    ...GitTokenReducers,
     router: routerReducer
   }),
   applyMiddleware(middleware),
