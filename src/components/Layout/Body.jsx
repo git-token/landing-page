@@ -27,10 +27,13 @@ class BodyComponent extends Component {
 
   componentDidMount() {
     const { dispatch, Actions: { account } } = this.props
+
+    dispatch(account.worker())
+
     setTimeout(() => {
       account.getProfile({})
-      dispatch(account.handleMessages())
     }, 3000)
+
   }
 
   gif() {
