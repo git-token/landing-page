@@ -1,6 +1,6 @@
 {
   "name": "gittoken-landing-page",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Landing Page for GitToken",
   "main": "./dist/index",
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "countdown": "^2.6.0",
-    "gittoken-react-components": "0.0.1",
+    "gittoken-react-components": "0.0.2",
     "gittoken-reducers": "0.0.17",
     "gittoken-svg-icons": "0.0.8",
     "react": "^15.5.4",
