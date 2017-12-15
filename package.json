@@ -1,6 +1,6 @@
 {
   "name": "gittoken-landing-page",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Landing Page for GitToken",
   "main": "./dist/index",
   "scripts": {

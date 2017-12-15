@@ -29,7 +29,7 @@ class FooterComponent extends Component {
                 marginBottom: '50px',
                 paddingTop: '100px'
               }}>
-              <MainLogo height={"100px"} style={{ }}/>
+              {/* <MainLogo height={"100px"} style={{ }}/> */}
               <h4 style={{ fontWeight: 100 }}>GitToken 2017-2018</h4>
             </div>
           </Col>

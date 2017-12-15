@@ -65,7 +65,11 @@ class WelcomeComponent extends Component {
             <Col smHidden xsHidden md={6} lg={6}>
               <Row>
                 {/* {this.gif()} */}
-                <svg height={"950px"} viewBox="0 0 400 400" style={{ marginLeft: '-200px', marginTop: '-250px', zIndex: '-1' }}>
+                <svg width={"200%"} viewBox="0 0 1000 1000" style={{
+                  zIndex: '-1',
+                  margin: '-300px',
+                  marginBottom: '-150px'
+                }}>
 
                   <defs>
                     <radialGradient id="g1" fx="50%" fy="50%" cx="50%" cy="50%" r="50%">
@@ -74,33 +78,59 @@ class WelcomeComponent extends Component {
                     </radialGradient>
                   </defs>
 
-                  <circle cx="200" cy="200" r="200" style={{fill: 'url(#g1)'}}/>
+                  <circle cx="500" cy="500" r="400" style={{fill: 'url(#g1)'}}/>
+
+                  <path d="M 520 500 L 730 500 L 730 600 L 500 700 L 300 600 L 300 400 L 500 300 L 710 390 "
+                    fill="transparent"
+                    strokeLinejoin={"round"}
+                    stroke="#cc5333"
+                    strokeWidth="36"
+                  />
+
+                  <circle
+                    cx="500"
+                    cy="500"
+                    r="26"
+                    fill="transparent"
+                    stroke="#cc5333"
+                    strokeWidth="16"
+                  />
+
+                  <circle
+                    cx="730"
+                    cy="400"
+                    r="26"
+                    fill="transparent"
+                    stroke="#cc5333"
+                    strokeWidth="16"
+                  />
 
 
-                  <path d="M 200 200 L 300 150 L 300 250 L 200 300 L 100 250 L 100 150 L 200 100 L 255 127 "
+                  {/* <path d="M 370 250 L 550 250 L 550 350 L 350 450 L 150 350 L 150 150 L 350 50 L 530 140 "
           					fill="transparent"
           					strokeLinejoin={"round"}
           					stroke="#cc5333"
-          					strokeWidth="12"
+          					strokeWidth="36"
           				/>
 
-                  <circle cx="255" cy="127" r="14" fill="#cc5333"/>
-          				<circle cx="255" cy="127" r="8" fill="#f0e2ff"/>
-          				<circle cx="200" cy="200" r="14" fill="#cc5333"/>
-          				<circle cx="200" cy="200" r="8" fill="#fff"/>
+                  <circle
+                    cx="350"
+                    cy="250"
+                    r="26"
+                    fill="transparent"
+                    stroke="#cc5333"
+          					strokeWidth="16"
+                  />
 
+                  <circle
+                    cx="550"
+                    cy="150"
+                    r="26"
+                    fill="transparent"
+                    stroke="#cc5333"
+          					strokeWidth="16"
+                  /> */}
 
-
-
-
-          				{/* <path className={"path"} d="M 300 150 L 200 100 L 100 150 L 100 250 L 200 300 L 300 250 L 300 150 L 200 100 "
-          					fill="transparent"
-          					strokeLinejoin={"round"}
-          					stroke="#cc5333"
-          					strokeWidth="12"
-          					// strokeDasharray={"5, 5"}
-          					// strokeDashoffset={"200"}
-          				/> */}
           			</svg>
               </Row>
             </Col>
