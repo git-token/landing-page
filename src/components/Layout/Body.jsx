@@ -10,6 +10,8 @@ import {
   Button
 } from 'react-bootstrap'
 
+import HlsStream from 'gittoken-react-components/dist/components/Media/HlsStream'
+
 import {
   Welcome,
   Newsletter
@@ -54,6 +56,8 @@ class BodyComponent extends Component {
         <Welcome />
         <br/>
         <Newsletter />
+        <br/>
+        <HlsStream />
       </div>
     );
   }

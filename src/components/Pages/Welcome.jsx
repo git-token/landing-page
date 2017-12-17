@@ -28,7 +28,7 @@ class WelcomeComponent extends Component {
   }
 
   signup() {
-    location.href = "https://alpha.gittoken.io/auth/github"
+    location.href = "https://gittoken.io/auth/github"
   }
 
   render() {
