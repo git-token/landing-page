@@ -56,7 +56,7 @@ class BodyComponent extends Component {
         <Welcome />
         <br/>
         <Newsletter />
-        <br/>
+        <br />
         <HlsStream />
       </div>
     );

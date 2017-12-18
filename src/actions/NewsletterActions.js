@@ -7,16 +7,26 @@ export default class NewsletterActions {
 
   register({ email }) {
     return (dispatch) => {
-      axios({
-        method: 'POST',
-        url: this.newsletterUri,
-        data: { email },
-        json: true,
-      }).then((result) => {
-        console.log('result', result)
-      }).catch((error) => {
-        console.log('error', error)
-      })
+      if ( !email || email.length == 0 || !email.includes('@') ) {
+        alert('Invalid Email')
+      } else {
+        axios({
+          method: 'POST',
+          url: this.newsletterUri,
+          data: { email },
+          json: true,
+        }).then((result) => {
+          alert('Thanks for Subscribing!')
+          dispatch({
+            type: 'SET_ACCOUNT_DETAILS',
+            id: 'email',
+            value: ''
+          })
+        }).catch((error) => {
+          console.log('error', error)
+          alert('Apologies! An error has occured')
+        })
+      }
     }
   }
 }

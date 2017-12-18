@@ -11,6 +11,7 @@ import {
 } from 'react-bootstrap'
 
 import MainLogo from 'gittoken-svg-icons/dist/MainLogo'
+import GitHubIcon from 'react-icons/lib/fa/github'
 
 class WelcomeComponent extends Component {
   constructor(opts) {
@@ -59,7 +60,7 @@ class WelcomeComponent extends Component {
                 onClick={this.signup.bind(this)}
                 block
               >
-                Register & Enable Your Organization
+                <GitHubIcon style={{ fontSize: '36px' }} /> Register with GitHub 
               </Button>
             </Col>
             <Col smHidden xsHidden md={6} lg={6}>

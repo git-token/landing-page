@@ -21,12 +21,12 @@ class NewsletterComponent extends Component {
   setValue(evt) {
     const { id, value } = evt.target
     const { dispatch } = this.props
-    dispatch({ type: 'UPDATE', id, value })
+
+    dispatch({ type: 'SET_ACCOUNT_DETAILS', id, value })
   }
 
   register() {
-    const { dispatch, main: { email } } = this.props
-    console.log('newsletterActions', newsletterActions)
+    const { dispatch, Account: { email } } = this.props
     dispatch(newsletterActions.register({ email }))
   }
 
